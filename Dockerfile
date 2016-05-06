@@ -11,8 +11,9 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install gd \
   && a2enmod rewrite
   
-# Use our own php.ini file
+# Use our php and apache config files
 COPY config/php.ini /usr/local/etc/php/
+COPY config/apache2.conf /etc/apache2/apache2.conf
 
 # Copy Drupal into the webroot
 COPY src/ /var/www/html/
