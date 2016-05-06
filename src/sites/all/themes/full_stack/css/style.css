@@ -1,0 +1,59 @@
+h2 a{
+    color: #000; 
+}
+
+h2 a:hover{
+    color: #777;
+}
+
+pre{
+    padding: 0;
+    packground-color: white;
+    border: none;
+}
+
+.syntaxhighlighter table .container:before {
+    display: none !important;
+}
+
+pre code{
+    white-space: nowrap;
+}
+
+.syntaxhighlighter{
+    padding-top: 14px;
+}
+
+.syntaxhighlighter.nogutter{
+    padding-left: 14px;
+}
+
+.node-project.view-mode-full .field-name-field-image img{
+    max-width: 100%;
+    height: auto;
+}
+
+.view-mode-full .field{
+    margin: 0 0 22px 0;
+}
+
+.node-unpublished{
+    background-color: #ffeeee;
+}
+
+.node .content .field-name-body h1,
+.node .content .field-name-body h2,
+.node .content .field-name-body h3,
+.node .content .field-name-body h4,
+.node .content .field-name-body h5,
+.node .content .field-name-body h6,
+.node .content .field-name-body img.pull-right,
+.node .content .field-name-body img.pull-left{
+  clear: both;
+}
+
+.node .content .field-name-body img.pull-right,
+.node .content .field-name-body img.pull-left{
+  margin-left: 20px;
+  margin-right: 20px;
+}
