@@ -11,6 +11,13 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install gd \
   && a2enmod rewrite
   
+# Install Drush and Drupal Console.
+RUN php -r "readfile('https://s3.amazonaws.com/files.drush.org/drush.phar');" > /usr/local/bin/drush \
+  && chmod +x /usr/local/bin/drush \
+  && curl https://drupalconsole.com/installer -L -o drupal.phar \
+  && mv drupal.phar /usr/local/bin/drupal \
+  && chmod +x /usr/local/bin/drupal
+  
 # Use our own php config file
 COPY config/php.ini /usr/local/etc/php/
 
